@@ -1,0 +1,63 @@
+{
+  "blockedFeaturesList": [],
+  "blockedActionsMap": {
+    "transfer.balance": [
+      "transfer.balance___acala-NATIVE-ACA"
+    ],
+    "transfer.token": [
+      "transfer.balance___alephTest-NATIVE-TZERO"
+    ],
+    "transfer.xcm": [
+      "transfer.xcm___statemint-LOCAL-USDt___hydradx_main"
+    ],
+    "send_nft": [
+      "send_nft___kusama___8ac73a177ab39d3a7d-INITIALWORLD_CAT_V0"
+    ],
+    "swap": [
+      "swap___astar-NATIVE-ASTR___hydradx_main-LOCAL-USDC___HYDRADX_MAINNET",
+      "swap___hydradx_main-LOCAL-ASTR___hydradx_main-LOCAL-USDC___HYDRADX_MAINNET",
+      "swap___hydradx_main-LOCAL-USDC___hydradx_main-NATIVE-HDX___HYDRADX_MAINNET",
+      "swap___polkadot-NATIVE-DOT___ethereum-ERC20-USDC-0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48___SIMPLE_SWAP",
+      "swap___statemint-NATIVE-DOT___statemint-LOCAL-USDt___POLKADOT_ASSET_HUB",
+      "swap___polkadot-NATIVE-DOT___ethereum-NATIVE-ETH___CHAIN_FLIP_MAINNET",
+      "swap___statemint-NATIVE-DOT___mythos-NATIVE-MYTH___POLKADOT_ASSET_HUB",
+      "swap___statemint-NATIVE-DOT___moonbeam-LOCAL-xcUSDT___POLKADOT_ASSET_HUB",
+      "swap___polkadot-NATIVE-DOT___hydradx_main-LOCAL-USDT___HYDRADX_MAINNET",
+      "swap___statemint-LOCAL-USDt___polkadot-NATIVE-DOT___POLKADOT_ASSET_HUB",
+      "swap___polkadot-NATIVE-DOT___astar-LOCAL-USDT___POLKADOT_ASSET_HUB",
+      "swap___polkadot-NATIVE-DOT___astar-NATIVE-ASTR___HYDRADX_MAINNET",
+      "swap___polkadot-NATIVE-DOT___statemint-LOCAL-DED___POLKADOT_ASSET_HUB"
+ ],
+    "staking.join_pool": [],
+    "staking.leave_pool": [],
+    "staking.bond": [],
+    "staking.unbond": [],
+    "staking.claim_reward": [
+      "staking.claim_reward___VARA___nomination_pool___vara_network"
+    ],
+    "staking.withdraw": [],
+    "staking.compounding": [],
+    "staking.cancel_compounding": [],
+    "staking.cancel_unstake": [],
+    "earn.join_pool": [],
+    "earn.mint_vdot": [],
+    "earn.mint_ldot": [],
+    "earn.mint_sdot": [],
+    "earn.mint_qdot": [],
+    "earn.mint_stdot": [],
+    "earn.mint_vmanta": [],
+    "earn.redeem_qdot": [],
+    "earn.redeem_vdot": [],
+    "earn.redeem_ldot": [],
+    "earn.redeem_sdot": [],
+    "earn.redeem_stdot": [],
+    "earn.redeem_vmanta": [],
+    "earn.unstake_qdot": [],
+    "earn.unstake_vdot": [],
+    "earn.unstake_ldot": [],
+    "earn.unstake_sdot": [],
+    "earn.unstake_stdot": [],
+    "earn.unstake_vmanta": [],
+    "token.spending_approval": []
+  }
+}

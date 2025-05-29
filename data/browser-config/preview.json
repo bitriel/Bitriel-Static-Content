@@ -1,0 +1,13 @@
+{
+  "whiteList": [
+    "tel:",
+    "mailto:",
+    "maps:",
+    "geo:",
+    "sms:",
+    "tg:",
+    "https://apps.apple.com",
+    "vnd.youtube:",
+    "https://www.reddit.com"
+  ]
+}
