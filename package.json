@@ -1,25 +1,25 @@
 {
-  "name": "subwallet-static-content",
-  "version": "1.0.0",
-  "description": "Static Content Of SubWallet",
-  "main": "index.js",
-  "type": "commonjs",
-  "repository": "https://github.com/Koniverse/SubWallet-Static-Content.git",
-  "author": "AnhMTV <maithachvietanh@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "axios": "^1.5.1",
-    "dotenv": "^16.3.1",
-    "install": "^0.13.0",
-    "node-fetch": "^3.3.2",
-    "npm": "^10.1.0"
-  },
-  "scripts": {
-    "update-data": "node scripts/fetch-data.mjs",
-    "generate-period-data": "node scripts/generate-period-time.mjs"
-  },
-  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728",
-  "dependencies": {
-    "strapi": "^3.6.11"
-  }
+    "name": "subwallet-static-content",
+    "version": "1.0.0",
+    "description": "Static Content Of SubWallet",
+    "main": "index.js",
+    "type": "commonjs",
+    "repository": "https://github.com/Koniverse/SubWallet-Static-Content.git",
+    "author": "AnhMTV <maithachvietanh@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "axios": "^1.5.1",
+        "dotenv": "^16.3.1",
+        "install": "^0.13.0",
+        "node-fetch": "^3.3.2",
+        "npm": "^10.1.0"
+    },
+    "scripts": {
+        "update-data": "node scripts/fetch-data.mjs",
+        "generate-period-data": "node scripts/generate-period-time.mjs"
+    },
+    "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728",
+    "dependencies": {
+        "@strapi/strapi": "^5.14.0"
+    }
 }
