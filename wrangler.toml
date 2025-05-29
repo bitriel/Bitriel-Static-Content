@@ -1,2 +1,0 @@
-[site]
-bucket = "./data"  # Path to your static files 
