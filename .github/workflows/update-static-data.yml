@@ -38,45 +38,6 @@ jobs:
         run: |
           yarn install --immutable | grep -v 'YN0013'
           yarn update-data ${{ github.event.inputs.environment }} ${{ github.event.inputs.folder }}
-      - name: Install jq and texterify
-        if: ${{ !github.event.inputs.folder || github.event.inputs.folder == 'localization-contents'}}
-        run: |
-          sudo apt-get install -y jq
-          sudo yarn global add texterify
-      - name: Update data texterify
-        if: ${{ !github.event.inputs.folder || github.event.inputs.folder == 'localization-contents'}}
-        env:
-          TEXTERIFY_MAIL_SW_EXTENSION: ${{ secrets.TEXTERIFY_MAIL_SW_EXTENSION }}
-          TEXTERIFY_TOKEN_SW_EXTENSION: ${{ secrets.TEXTERIFY_TOKEN_SW_EXTENSION }}
-          TEXTERIFY_MAIL_AVAILSPACE_WEB: ${{ secrets.TEXTERIFY_MAIL_AVAILSPACE_WEB }}
-          TEXTERIFY_TOKEN_AVAILSPACE_WEB: ${{ secrets.TEXTERIFY_TOKEN_AVAILSPACE_WEB }}
-        run: |
-          if [ ${{ github.event.inputs.environment }} == "production" ]; then
-            JSON_FILE="data/localization-contents/list.json"
-            SUFFIX="/prod"
-          else
-            JSON_FILE="data/localization-contents/preview.json"
-            SUFFIX="/dev"
-          fi
-          # Read and loop through each item in the selected JSON file
-          jq -c '.[]' $JSON_FILE | while read -r item; do
-            # Update the export_directory field
-            updated_item=$(echo $item | jq --arg suffix "$SUFFIX" '.export_directory = (.export_directory + $suffix)')
-          
-            # Save each JSON object to file.json
-            echo $updated_item > texterify.json
-          
-            # Run the required commands
-            email='TEXTERIFY_MAIL_'"$(echo $updated_item | jq -r '.texterify_key')"
-            token='TEXTERIFY_TOKEN_'"$(echo $updated_item | jq -r '.texterify_key')"
-            echo $email
-            echo $token
-            auth_email="${!email}"
-            auth_secret="${!token}"
-            echo $auth_email
-            texterify download --auth-email="$auth_email" --auth-secret="$auth_secret"
-          
-          done
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
