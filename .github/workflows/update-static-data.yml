@@ -48,10 +48,10 @@ jobs:
         id: get_project_name_cf
         run: |
           echo ${{ github.event.repository.name }}
-          if [ ${{ github.event.repository.name }} == "SubWallet-Static-Content" ]; then
-            PROJECT_NAME="sw-static-data"
+          if [ ${{ github.event.repository.name }} == "Bitriel-Static-Content" ]; then
+            PROJECT_NAME="bitriel-static-data"
           else
-            PROJECT_NAME="sw-static-data-dev"
+            PROJECT_NAME="bitriel-static-data-dev"
           fi
           echo $PROJECT_NAME
           echo "project_name=$PROJECT_NAME" >> $GITHUB_OUTPUT

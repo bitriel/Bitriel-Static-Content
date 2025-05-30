@@ -2,9 +2,13 @@ import * as fs from "fs";
 import axios from "axios";
 import path from "path";
 import { writeJSONFile } from "./utils.mjs";
+import dotenv from "dotenv";
 
-const STRAPI_URL = "https://content.subwallet.app";
-const RESOURCE_URL = "https://static-data.subwallet.app";
+// Load environment variables
+dotenv.config();
+
+const STRAPI_URL = process.env.STRAPI_URL || "https://content.bitriel.app";
+const RESOURCE_URL = process.env.RESOURCE_URL || "https://static-data.bitriel.app";
 
 const cacheConfigs = [
     {
