@@ -62,7 +62,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: ${{ steps.get_project_name_cf.outputs.project_name}}
-          gitHubToken: ${{ secrets.GH_AUTOMATION_TOKEN }}
+          token: ${{ secrets.GH_AUTOMATION_TOKEN }}
           branch: ${{ github.event.inputs.branch }}
           directory: './data'
           wranglerVersion: '3'
